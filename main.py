@@ -47,11 +47,13 @@ async def main():
             page = await browser.get(link)
             await page.save_screenshot(filename=screenshot_file_path(link))
             
-            print("H4 Content:", content)
-            print("H4 Link:", link)
-            print("Paragraph Content:", content)
+            print("Title:", title)
+            print("Link:", link)
+            print("Content:", content)
 
-            #Do Whatever Here - Send to Discord/Slack/Telegram
+            #
+            # Do Whatever Here - Send to Discord/Slack/Telegram
+            #
 
     # Close Page
     await page.close()
